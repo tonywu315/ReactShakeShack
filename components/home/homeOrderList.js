@@ -5,10 +5,6 @@ import { HomeOrderListItem } from "./homeOrderListItem.js";
 import { Link } from "react-router-dom";
 
 export class HomeOrderList extends React.Component {
-    deleteOrderCallback = id => {
-        this.props.deleteOrderCallback(id);
-    };
-
     render() {
         const deleteOrder = this.props.deleteOrderCallback;
         const orders = this.props.list;
@@ -16,7 +12,7 @@ export class HomeOrderList extends React.Component {
             <li key={index}>
                 <HomeOrderListItem
                     order={orders}
-                    deleteOrderCallback={this.deleteOrderCallback}
+                    deleteOrderCallback={this.props.deleteOrderCallback}
                 />
             </li>
         ));
