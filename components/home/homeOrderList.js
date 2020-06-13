@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 export class HomeOrderList extends React.Component {
     render() {
-        const deleteOrder = this.props.deleteOrderCallback;
         const orders = this.props.list;
         const items = orders.map((orders, index) => (
             <li key={index}>
